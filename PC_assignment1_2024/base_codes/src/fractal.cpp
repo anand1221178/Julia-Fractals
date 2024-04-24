@@ -15,7 +15,7 @@ using namespace std;
 
 #define DIM 768
 /*Uncomment the following line for visualization of the bitmap*/
-//#define DISPLAY 1
+#define DISPLAY 1
 
 struct cuComplex {
     float   r;

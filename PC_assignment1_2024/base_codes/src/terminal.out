@@ -1,0 +1,7 @@
+./run.sh: line 2: ./fractal: No such file or directory
+./run.sh: line 2: ./fractal: No such file or directory
+./run.sh: line 2: ./fractal: No such file or directory
+Elapsed time: 
+Serial time: 0.618031
+Parallel time: 0.604005
+Speedup: 1.02322
