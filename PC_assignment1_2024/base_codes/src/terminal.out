@@ -5,3 +5,28 @@ Elapsed time:
 Serial time: 0.618031
 Parallel time: 0.604005
 Speedup: 1.02322
+Elapsed time: 
+Serial time: 0.621802
+Parallel time: 0.616109
+Speedup: 1.00924
+Elapsed time: 
+Serial time: 0.640202
+Parallel time: 0.615967
+Speedup: 1.03934
+Elapsed time: 
+Serial time: 0.625655
+Parallel time: 0.621634
+Speedup: 1.00647
+Elapsed time: 
+Serial time: 0.629003
+Parallel time: 0.610748
+Speedup: 1.02989
+Elapsed time: 
+Serial time: 0.647397
+Parallel time: 0.629533
+Speedup: 1.02838
+./fractal: error while loading shared libraries: libglut.so.3: cannot open shared object file: No such file or directory
+Elapsed time: 
+Serial time: 0.621095
+Parallel time: 0.604764
+Speedup: 1.027
