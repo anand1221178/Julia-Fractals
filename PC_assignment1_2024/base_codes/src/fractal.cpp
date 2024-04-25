@@ -17,6 +17,8 @@ using namespace std;
 /*Uncomment the following line for visualization of the bitmap*/
 #define DISPLAY 1
 
+#define NUM_THREADS 8
+
 //struct used in the julia function to represent complex numbers on the complex plane
 struct cuComplex {
     float   r;
@@ -56,6 +58,14 @@ int julia( int x, int y ) {
 
 /*Parallelize the following function using OpenMP*/
 void kernel_omp ( unsigned char *ptr ){
+    omp_set_num_threads(NUM_THREADS); //set for 8 for now 768/8 = 96
+    #pragma omp parallel 
+    {
+        int tthreads = NUM_THREADS //get number of threads
+        //can use tasks here to parallelize the for loop
+        //for each thread distribute the work
+        
+    }  //start team of threads
     for (int y=0; y<DIM; y++) {
         for (int x=0; x<DIM; x++) {
             int offset = x + y * DIM;

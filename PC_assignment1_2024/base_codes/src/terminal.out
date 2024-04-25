@@ -30,3 +30,24 @@ Elapsed time:
 Serial time: 0.621095
 Parallel time: 0.604764
 Speedup: 1.027
+Elapsed time: 
+Serial time: 0.619623
+Parallel time: 0.288477
+Speedup: 2.14792
+Number of threads: 1
+Elapsed time: 
+Serial time: 0.643749
+Parallel time: 0.630065
+Speedup: 1.02172
+Number of threads: 8
+Number of threads: 8
+Number of threads: 8
+Number of threads: 8
+Number of threads: 8
+Number of threads: 8
+Number of threads: 8
+Number of threads: 8
+Elapsed time: 
+Serial time: 0.662914
+Parallel time: 0.63315
+Speedup: 1.04701
