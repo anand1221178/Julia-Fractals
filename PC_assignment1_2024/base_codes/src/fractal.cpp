@@ -15,9 +15,9 @@ using namespace std;
 
 #define DIM 768 //defines the image dimensions width and height
 /*Uncomment the following line for visualization of the bitmap*/
+#define NUM_THREADS 4
 #define DISPLAY 1
 
-#define NUM_THREADS 8
 
 //struct used in the julia function to represent complex numbers on the complex plane
 struct cuComplex {
@@ -42,7 +42,7 @@ int julia( int x, int y ) {
     float jy = scale * (float)(DIM/2 - y)/(DIM/2);
 
     //cuComplex c(-0.8, 0.156);
-    cuComplex c(-0.7269, 0.1889); //defines object c -> changing this will give us a different julia set
+    cuComplex c(-0.5, -0.56); //defines object c -> changing this will give us a different julia set
     cuComplex a(jx, jy);// defines object a -> created using the scaled coordinates (jx, jy) asscoiated with the pixel (x, y)
 
     //iterates a max of 200 times to determine if the point is in the julia set
@@ -57,27 +57,74 @@ int julia( int x, int y ) {
 }
 
 /*Parallelize the following function using OpenMP*/
-void kernel_omp ( unsigned char *ptr ){
+void kernel_omp_rowwise ( unsigned char *ptr ){
+    int nthreads; //used for collection at the end and to set the number of threads in the par region
+    int tid, tthreads, y;
+    int juliaValue;
     omp_set_num_threads(NUM_THREADS); //set for 8 for now 768/8 = 96
-    #pragma omp parallel 
+    #pragma omp parallel private(tid, y)
     {
-        int tthreads = NUM_THREADS //get number of threads
-        //can use tasks here to parallelize the for loop
-        //for each thread distribute the work
-        
-    }  //start team of threads
-    for (int y=0; y<DIM; y++) {
-        for (int x=0; x<DIM; x++) {
-            int offset = x + y * DIM;
+        tthreads = NUM_THREADS; //get number of threads in the par region
+        tid = omp_get_thread_num(); //get the unique thread ids
 
-            int juliaValue = julia( x, y );
-            ptr[offset*4 + 0] = 255 * juliaValue;
-            ptr[offset*4 + 1] = 0;
-            ptr[offset*4 + 2] = 0;
-            ptr[offset*4 + 3] = 255;
+        //set our master theread responsible for cleanup and distro
+        // #pragma omp critical
+        if(tid == 0){
+            nthreads = tthreads;
         }
-    }
+
+        for (y=tid; y < DIM ; y = y + tthreads) //distro over rows here
+        {
+            for (int x=0; x<DIM; x++)//cols here
+            {
+                int offset = x + y * DIM; //offset out calculation
+                    //gathering all the data now
+                juliaValue = julia( x, y );
+                // cout << juliaValue << endl;
+
+                ptr[offset*4 + 0] = 255 * juliaValue;
+                ptr[offset*4 + 1] = 0;
+                ptr[offset*4 + 2] = 0;
+                ptr[offset*4 + 3] = 255;
+            }
+        }
+    }  
+
+
  }
+
+void kernal_omp_colwise ( unsigned char *ptr ){
+        int nthreads; //used for collection at the end and to set the number of threads in the par region
+    int tid, tthreads, x;
+    int juliaValue;
+    omp_set_num_threads(NUM_THREADS); //set for 8 for now 768/8 = 96
+    #pragma omp parallel private(tid, x)
+    {
+        tthreads = NUM_THREADS; //get number of threads in the par region
+        tid = omp_get_thread_num(); //get the unique thread ids
+        //set our master theread responsible for cleanup and distro
+        // #pragma omp critical
+        if(tid == 0){
+            nthreads = tthreads;
+        }
+        for (x=tid; x < DIM ; x = x + tthreads) //distro over rows here
+        {
+            for (int y=0; y<DIM; y++)//cols here
+            {
+                int offset = y + x * DIM; //offset out calculation
+                    //gathering all the data now
+                juliaValue = julia( y, x );
+                // cout << juliaValue << endl;
+
+                ptr[offset*4 + 0] = 255 * juliaValue;
+                ptr[offset*4 + 1] = 0;
+                ptr[offset*4 + 2] = 0;
+                ptr[offset*4 + 3] = 255;
+            }
+        }
+    }  
+ }
+ 
  
 
  //responsible for calculating and assigning colors to pixels in the image
@@ -98,8 +145,9 @@ void kernel_omp ( unsigned char *ptr ){
 int main( void ) {
     CPUBitmap bitmap( DIM, DIM );
     unsigned char *ptr_s = bitmap.get_ptr();
-    unsigned char *ptr_p = bitmap.get_ptr(); 
-    double start, finish_s, finish_p; 
+    unsigned char *ptr_p_col = bitmap.get_ptr(); 
+    unsigned char *ptr_p_row = bitmap.get_ptr(); 
+    double start, finish_s, finish_p_row,finish_p_col; 
     
     /*Serial run*/
     start = omp_get_wtime();
@@ -108,13 +156,19 @@ int main( void ) {
     
     /*Parallel run*/ 
     start = omp_get_wtime();
-    kernel_omp( ptr_p );
-	finish_p = omp_get_wtime() - start;
+    kernel_omp_rowwise( ptr_p_row );
+	finish_p_row = omp_get_wtime() - start;
+
+    // start = omp_get_wtime();
+    kernal_omp_colwise( ptr_p_col );
+	finish_p_col = omp_get_wtime() - start;
     
     cout << "Elapsed time: " << endl;
     cout << "Serial time: " << finish_s << endl;
-    cout << "Parallel time: " << finish_p << endl;
-    cout << "Speedup: " << finish_s/finish_p << endl;
+    cout << "Parallel time row-wise: " << finish_p_row << endl;
+    cout << "Speedup row wise: " << finish_s/finish_p_row << endl;
+    cout << "Parallel time col-wise: " << finish_p_col << endl;
+    cout << "Speedup col wise: " << finish_s/finish_p_col << endl;
 	    
     #ifdef DISPLAY     
     bitmap.display_and_exit();
