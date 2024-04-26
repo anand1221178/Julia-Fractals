@@ -60,7 +60,7 @@ int julia( int x, int y ) {
 void kernel_omp_rowwise ( unsigned char *ptr ){
     int nthreads; //used for collection at the end and to set the number of threads in the par region
     int tid, tthreads, y;
-    int juliaValue;
+    // int juliaValue;
     omp_set_num_threads(NUM_THREADS); //set for 8 for now 768/8 = 96
     #pragma omp parallel private(tid, y)
     {
@@ -79,7 +79,7 @@ void kernel_omp_rowwise ( unsigned char *ptr ){
             {
                 int offset = x + y * DIM; //offset out calculation
                     //gathering all the data now
-                juliaValue = julia( x, y );
+                int juliaValue = julia( x, y );
                 // cout << juliaValue << endl;
 
                 ptr[offset*4 + 0] = 255 * juliaValue;
@@ -96,7 +96,7 @@ void kernel_omp_rowwise ( unsigned char *ptr ){
 void kernal_omp_colwise ( unsigned char *ptr ){
         int nthreads; //used for collection at the end and to set the number of threads in the par region
     int tid, tthreads, x;
-    int juliaValue;
+    // int juliaValue;
     omp_set_num_threads(NUM_THREADS); //set for 8 for now 768/8 = 96
     #pragma omp parallel private(tid, x)
     {
@@ -113,7 +113,7 @@ void kernal_omp_colwise ( unsigned char *ptr ){
             {
                 int offset = y + x * DIM; //offset out calculation
                     //gathering all the data now
-                juliaValue = julia( y, x );
+                int juliaValue = julia( y, x );
                 // cout << juliaValue << endl;
 
                 ptr[offset*4 + 0] = 255 * juliaValue;
@@ -123,6 +123,43 @@ void kernal_omp_colwise ( unsigned char *ptr ){
             }
         }
     }  
+ }
+
+ void kernal_omp_rowblock (unsigned char *ptr)
+ {
+    int tid, rows_per_thread, start_row,end_row,y;
+    int remainder = DIM % NUM_THREADS;
+    omp_set_num_threads(NUM_THREADS);
+    #pragma omp parallel private(tid, rows_per_thread, start_row, end_row, y)
+    {
+        tid = omp_get_thread_num();
+        int tthreads = omp_get_num_threads();
+
+        rows_per_thread = DIM/tthreads;
+        start_row = tid * rows_per_thread;
+        end_row = start_row + rows_per_thread -1; 
+        //#pragma omp critical
+        //cout << "Thread " << tid << " is processing from starting at row: " << start_row << " uptill row: " << end_row << endl;
+
+        if(tid == NUM_THREADS -1 && remainder != 0){
+            end_row += remainder;
+            //#pragma omp critical
+            //cout << " !!!!! Thread " << tid << " is processing from starting at row: " << start_row << " uptill row: " << end_row << endl;
+        }
+
+        for(y = start_row; y <= end_row ; y++){
+            for(int x = 0; x < DIM ; x++){
+                int offset = x + y * DIM; //offset out calculation
+                //gathering all the data now
+                int juliaValue = julia( x, y );
+                // cout << juliaValue << endl;
+                ptr[offset*4 + 0] = 255 * juliaValue;
+                ptr[offset*4 + 1] = 0;
+                ptr[offset*4 + 2] = 0;
+                ptr[offset*4 + 3] = 255;
+            }
+        }
+    }
  }
  
  
@@ -147,28 +184,34 @@ int main( void ) {
     unsigned char *ptr_s = bitmap.get_ptr();
     unsigned char *ptr_p_col = bitmap.get_ptr(); 
     unsigned char *ptr_p_row = bitmap.get_ptr(); 
-    double start, finish_s, finish_p_row,finish_p_col; 
-    
-    /*Serial run*/
+    unsigned char *ptr_p_2dRow = bitmap.get_ptr();
+    double start, finish_s, finish_p_row,finish_p_col, finish_p_2dRow; 
+
     start = omp_get_wtime();
     kernel_serial( ptr_s );
 	finish_s = omp_get_wtime() - start;
     
-    /*Parallel run*/ 
+
     start = omp_get_wtime();
     kernel_omp_rowwise( ptr_p_row );
 	finish_p_row = omp_get_wtime() - start;
 
-    // start = omp_get_wtime();
+    start = omp_get_wtime();
     kernal_omp_colwise( ptr_p_col );
 	finish_p_col = omp_get_wtime() - start;
     
+    start = omp_get_wtime();
+    kernal_omp_rowblock( ptr_p_2dRow );
+	finish_p_2dRow = omp_get_wtime() - start;
+
     cout << "Elapsed time: " << endl;
     cout << "Serial time: " << finish_s << endl;
     cout << "Parallel time row-wise: " << finish_p_row << endl;
     cout << "Speedup row wise: " << finish_s/finish_p_row << endl;
     cout << "Parallel time col-wise: " << finish_p_col << endl;
     cout << "Speedup col wise: " << finish_s/finish_p_col << endl;
+    cout << "Parallel time 2drow-wise: " << finish_p_2dRow << endl;
+    cout << "Speedup 2drow-wise: " << finish_s/finish_p_2dRow << endl;
 	    
     #ifdef DISPLAY     
     bitmap.display_and_exit();
