@@ -15,7 +15,7 @@ using namespace std;
 
 #define DIM 768 //defines the image dimensions width and height
 /*Uncomment the following line for visualization of the bitmap*/
-#define NUM_THREADS 4
+#define NUM_THREADS 8
 #define DISPLAY 1
 
 
@@ -41,8 +41,8 @@ int julia( int x, int y ) {
     float jx = scale * (float)(DIM/2 - x)/(DIM/2);
     float jy = scale * (float)(DIM/2 - y)/(DIM/2);
 
-    //cuComplex c(-0.8, 0.156);
-    cuComplex c(-0.5, -0.56); //defines object c -> changing this will give us a different julia set
+    cuComplex c(-0.8, 0.156);
+    // cuComplex c(-0.5, -0.56); //defines object c -> changing this will give us a different julia set
     cuComplex a(jx, jy);// defines object a -> created using the scaled coordinates (jx, jy) asscoiated with the pixel (x, y)
 
     //iterates a max of 200 times to determine if the point is in the julia set
@@ -67,17 +67,16 @@ void kernel_omp_rowwise ( unsigned char *ptr ){
         tthreads = NUM_THREADS; //get number of threads in the par region
         tid = omp_get_thread_num(); //get the unique thread ids
 
-        //set our master theread responsible for cleanup and distro
-        // #pragma omp critical
         if(tid == 0){
             nthreads = tthreads;
         }
 
         for (y=tid; y < DIM ; y = y + tthreads) //distro over rows here
         {
+            int baseOffset = y * DIM;
             for (int x=0; x<DIM; x++)//cols here
             {
-                int offset = x + y * DIM; //offset out calculation
+                int offset = x + baseOffset; //offset out calculation
                     //gathering all the data now
                 int juliaValue = julia( x, y );
                 // cout << juliaValue << endl;
@@ -109,9 +108,10 @@ void kernal_omp_colwise ( unsigned char *ptr ){
         }
         for (x=tid; x < DIM ; x = x + tthreads) //distro over rows here
         {
+            int baseOffset = x * DIM;
             for (int y=0; y<DIM; y++)//cols here
             {
-                int offset = y + x * DIM; //offset out calculation
+                int offset = y + baseOffset; //offset out calculation
                     //gathering all the data now
                 int juliaValue = julia( y, x );
                 // cout << juliaValue << endl;
@@ -148,8 +148,9 @@ void kernal_omp_colwise ( unsigned char *ptr ){
         }
 
         for(y = start_row; y <= end_row ; y++){
+            int baseOffset = y * DIM;
             for(int x = 0; x < DIM ; x++){
-                int offset = x + y * DIM; //offset out calculation
+                int offset = x + baseOffset; //offset out calculation
                 //gathering all the data now
                 int juliaValue = julia( x, y );
                 // cout << juliaValue << endl;
@@ -161,9 +162,45 @@ void kernal_omp_colwise ( unsigned char *ptr ){
         }
     }
  }
- 
- 
 
+  void kernal_omp_colblock (unsigned char *ptr)
+ {
+    int tid, cols_per_thread, start_col,end_col,x;
+    int remainder = DIM % NUM_THREADS;
+    omp_set_num_threads(NUM_THREADS);
+    #pragma omp parallel private(tid, cols_per_thread, start_col, end_col, x)
+    {
+        tid = omp_get_thread_num();
+        int tthreads = omp_get_num_threads();
+
+        cols_per_thread = DIM/tthreads;
+        start_col = tid * cols_per_thread;
+        end_col = start_col + cols_per_thread -1; 
+        //#pragma omp critical
+        //cout << "Thread " << tid << " is processing from starting at row: " << start_row << " uptill row: " << end_row << endl;
+
+        if(tid == NUM_THREADS -1 && remainder != 0){
+            end_col += remainder;
+            //#pragma omp critical
+            //cout << " !!!!! Thread " << tid << " is processing from starting at row: " << start_row << " uptill row: " << end_row << endl;
+        }
+
+        for(x = start_col; x <= end_col ; x++){
+            int baseOffset = x * DIM;
+            for(int y = 0; y < DIM ; y++){
+                int offset = y + baseOffset; //offset out calculation
+                //gathering all the data now
+                int juliaValue = julia( y, x );
+                // cout << juliaValue << endl;
+                ptr[offset*4 + 0] = 255 * juliaValue;
+                ptr[offset*4 + 1] = 0;
+                ptr[offset*4 + 2] = 0;
+                ptr[offset*4 + 3] = 255;
+            }
+        }
+    }
+ }
+ 
  //responsible for calculating and assigning colors to pixels in the image
  void kernel_serial ( unsigned char *ptr ){ //send in a pointer to an array of unsigned chars -> prolly reps image data in memory RGB?
     for (int y=0; y<DIM; y++) { //iterate over the rows of the image
@@ -185,15 +222,16 @@ int main( void ) {
     unsigned char *ptr_p_col = bitmap.get_ptr(); 
     unsigned char *ptr_p_row = bitmap.get_ptr(); 
     unsigned char *ptr_p_2dRow = bitmap.get_ptr();
-    double start, finish_s, finish_p_row,finish_p_col, finish_p_2dRow; 
+    unsigned char *ptr_p_2dcol = bitmap.get_ptr();
+    double start, finish_s, finish_p_row,finish_p_col, finish_p_2dcol,finish_p_2dRow; 
 
     start = omp_get_wtime();
     kernel_serial( ptr_s );
 	finish_s = omp_get_wtime() - start;
     
 
-    start = omp_get_wtime();
-    kernel_omp_rowwise( ptr_p_row );
+   start = omp_get_wtime();
+   kernel_omp_rowwise( ptr_p_row );
 	finish_p_row = omp_get_wtime() - start;
 
     start = omp_get_wtime();
@@ -204,6 +242,10 @@ int main( void ) {
     kernal_omp_rowblock( ptr_p_2dRow );
 	finish_p_2dRow = omp_get_wtime() - start;
 
+    start = omp_get_wtime();
+    kernal_omp_colblock( ptr_p_2dcol );
+	finish_p_2dcol = omp_get_wtime() - start;
+
     cout << "Elapsed time: " << endl;
     cout << "Serial time: " << finish_s << endl;
     cout << "Parallel time row-wise: " << finish_p_row << endl;
@@ -212,6 +254,8 @@ int main( void ) {
     cout << "Speedup col wise: " << finish_s/finish_p_col << endl;
     cout << "Parallel time 2drow-wise: " << finish_p_2dRow << endl;
     cout << "Speedup 2drow-wise: " << finish_s/finish_p_2dRow << endl;
+    cout << "Parallel time 2dcol-wise: " << finish_p_2dcol << endl;
+    cout << "Speedup 2dcol-wise: " << finish_s/finish_p_2dcol << endl;      
 	    
     #ifdef DISPLAY     
     bitmap.display_and_exit();

@@ -74683,3 +74683,77 @@ Parallel time col-wise: 0.170656
 Speedup col wise: 3.76622
 Parallel time 2drow-wise: 0.299349
 Speedup 2drow-wise: 2.14709
+Elapsed time: 
+Serial time: 0.659448
+Parallel time row-wise: 0.268445
+Speedup row wise: 2.45655
+Parallel time col-wise: 0.28262
+Speedup col wise: 2.33334
+Parallel time 2drow-wise: 0.342699
+Speedup 2drow-wise: 1.92428
+Elapsed time: 
+Serial time: 0.667511
+Parallel time row-wise: 0.28787
+Speedup row wise: 2.3188
+Parallel time col-wise: 0.325418
+Speedup col wise: 2.05124
+Parallel time 2drow-wise: 0.37566
+Speedup 2drow-wise: 1.7769
+Elapsed time: 
+Serial time: 0.658249
+Parallel time row-wise: 0.211625
+Speedup row wise: 3.11044
+Parallel time col-wise: 0.309345
+Speedup col wise: 2.12788
+Parallel time 2drow-wise: 0.326166
+Speedup 2drow-wise: 2.01814
+Elapsed time: 
+Serial time: 0.667982
+Parallel time row-wise: 0.174066
+Speedup row wise: 3.83752
+Parallel time col-wise: 0.197757
+Speedup col wise: 3.37779
+Parallel time 2drow-wise: 0.317213
+Speedup 2drow-wise: 2.10579
+Parallel time 2dcol-wise: 0.310336
+Speedup 2dcol-wise: 2.15245
+Elapsed time: 
+Serial time: 0.43974
+Parallel time row-wise: 0.117463
+Speedup row wise: 3.74365
+Parallel time col-wise: 0.129934
+Speedup col wise: 3.38433
+Parallel time 2drow-wise: 0.161338
+Speedup 2drow-wise: 2.72558
+Parallel time 2dcol-wise: 0.16524
+Speedup 2dcol-wise: 2.66122
+Elapsed time: 
+Serial time: 0.444835
+Parallel time row-wise: 0.117777
+Speedup row wise: 3.77691
+Parallel time col-wise: 0.123261
+Speedup col wise: 3.60889
+Parallel time 2drow-wise: 0.170341
+Speedup 2drow-wise: 2.61144
+Parallel time 2dcol-wise: 0.182919
+Speedup 2dcol-wise: 2.43187
+Elapsed time: 
+Serial time: 0.438765
+Parallel time row-wise: 0.116985
+Speedup row wise: 3.7506
+Parallel time col-wise: 0.117476
+Speedup col wise: 3.73494
+Parallel time 2drow-wise: 0.1649
+Speedup 2drow-wise: 2.6608
+Parallel time 2dcol-wise: 0.166346
+Speedup 2dcol-wise: 2.63766
+Elapsed time: 
+Serial time: 0.437101
+Parallel time row-wise: 0.121914
+Speedup row wise: 3.58532
+Parallel time col-wise: 0.117908
+Speedup col wise: 3.70712
+Parallel time 2drow-wise: 0.172576
+Speedup 2drow-wise: 2.5328
+Parallel time 2dcol-wise: 0.18057
+Speedup 2dcol-wise: 2.42068
