@@ -15,7 +15,8 @@ using namespace std;
 
 #define DIM 768 //defines the image dimensions width and height
 /*Uncomment the following line for visualization of the bitmap*/
-#define NUM_THREADS 8
+#define NUM_THREADS 16
+
 #define DISPLAY 1
 
 
@@ -200,6 +201,21 @@ void kernal_omp_colwise ( unsigned char *ptr ){
         }
     }
  }
+  //responsible for calculating and assigning colors to pixels in the image
+ void kernal_omp_for ( unsigned char *ptr ){ //send in a pointer to an array of unsigned chars -> prolly reps image data in memory RGB?
+    #pragma omp parallel for collapse(2)//collapse the two loops into one
+    for (int y=0; y<DIM; y++) { //iterate over the rows of the image
+        for (int x=0; x<DIM; x++) { //iterate over the columns of the image
+            int offset = x + y * DIM; //used to locate memory location of the pixel in the image data array pointed to by ptr
+
+            int juliaValue = julia( x, y ); //determines if the pixel at (x, y) is in the julia set
+            ptr[offset*4 + 0] = 255 * juliaValue; //assigns the color of the pixel based on the juliaValue
+            ptr[offset*4 + 1] = 0; //green
+            ptr[offset*4 + 2] = 0; //blue
+            ptr[offset*4 + 3] = 255; //alpha
+        }
+    }
+ }
  
  //responsible for calculating and assigning colors to pixels in the image
  void kernel_serial ( unsigned char *ptr ){ //send in a pointer to an array of unsigned chars -> prolly reps image data in memory RGB?
@@ -223,7 +239,8 @@ int main( void ) {
     unsigned char *ptr_p_row = bitmap.get_ptr(); 
     unsigned char *ptr_p_2dRow = bitmap.get_ptr();
     unsigned char *ptr_p_2dcol = bitmap.get_ptr();
-    double start, finish_s, finish_p_row,finish_p_col, finish_p_2dcol,finish_p_2dRow; 
+    unsigned char *ptr_p_omp = bitmap.get_ptr();
+    double start, finish_s, finish_p_row,finish_p_col, finish_p_2dcol,finish_p_2dRow,finish_p_omp; 
 
     start = omp_get_wtime();
     kernel_serial( ptr_s );
@@ -246,6 +263,10 @@ int main( void ) {
     kernal_omp_colblock( ptr_p_2dcol );
 	finish_p_2dcol = omp_get_wtime() - start;
 
+    start = omp_get_wtime();
+    kernal_omp_for( ptr_p_omp );
+    finish_p_omp = omp_get_wtime() - start;
+
     cout << "Elapsed time: " << endl;
     cout << "Serial time: " << finish_s << endl;
     cout << "Parallel time row-wise: " << finish_p_row << endl;
@@ -255,7 +276,9 @@ int main( void ) {
     cout << "Parallel time 2drow-wise: " << finish_p_2dRow << endl;
     cout << "Speedup 2drow-wise: " << finish_s/finish_p_2dRow << endl;
     cout << "Parallel time 2dcol-wise: " << finish_p_2dcol << endl;
-    cout << "Speedup 2dcol-wise: " << finish_s/finish_p_2dcol << endl;      
+    cout << "Speedup 2dcol-wise: " << finish_s/finish_p_2dcol << endl;     
+    cout << "Parallel time omp for: " << finish_p_omp << endl;
+    cout << "Speedup omp for: " << finish_s/finish_p_omp << endl; 
 	    
     #ifdef DISPLAY     
     bitmap.display_and_exit();
