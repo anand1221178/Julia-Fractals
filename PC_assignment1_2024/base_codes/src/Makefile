@@ -2,7 +2,7 @@ P1 = fractal
 #Choose either the C compiler or the C++ compiler from the following 2 lines
 CC = gcc
 CPP = g++
-CFLAGS = -g -Wall
+CFLAGS = -g -Wall -funroll-all-loops
 OMPFLAG = -fopenmp
 INCFLAG = -I "../common/"
 

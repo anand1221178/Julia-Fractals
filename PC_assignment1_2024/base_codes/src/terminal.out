@@ -224,3 +224,975 @@ Parallel time 2dcol-wise: 0.0866159
 Speedup 2dcol-wise: 4.08529
 Parallel time omp for: 0.0851445
 Speedup omp for: 4.15589
+Elapsed time: 
+Serial time: 0.340668
+Parallel time row-wise: 0.0671789
+Speedup row wise: 5.07105
+Parallel time col-wise: 0.0703647
+Speedup col wise: 4.84146
+Parallel time 2drow-wise: 0.0833131
+Speedup 2drow-wise: 4.08901
+Parallel time 2dcol-wise: 0.0860364
+Speedup 2dcol-wise: 3.95958
+Parallel time omp for: 0.0816496
+Speedup omp for: 4.17231
+Elapsed time: 
+Serial time: 0.351789
+Parallel time row-wise: 0.0683394
+Speedup row wise: 5.14767
+Parallel time col-wise: 0.0629349
+Speedup col wise: 5.58973
+Parallel time 2drow-wise: 0.0850738
+Speedup 2drow-wise: 4.1351
+Parallel time 2dcol-wise: 0.0914355
+Speedup 2dcol-wise: 3.8474
+Parallel time omp for: 0.0875067
+Speedup omp for: 4.02013
+Elapsed time: 
+Serial time: 0.346136
+Parallel time row-wise: 0.0695637
+Speedup row wise: 4.97581
+Parallel time col-wise: 0.0699003
+Speedup col wise: 4.95185
+Parallel time 2drow-wise: 0.0896118
+Speedup 2drow-wise: 3.86261
+Parallel time 2dcol-wise: 0.0864288
+Speedup 2dcol-wise: 4.00487
+Parallel time omp for: 0.0897146
+Speedup omp for: 3.85819
+Elapsed time: 
+Serial time: 0.347522
+Parallel time row-wise: 0.0702336
+Speedup row wise: 4.9481
+Parallel time col-wise: 0.0597184
+Speedup col wise: 5.81936
+Parallel time 2drow-wise: 0.0877287
+Speedup 2drow-wise: 3.96133
+Parallel time 2dcol-wise: 0.080931
+Speedup 2dcol-wise: 4.29406
+Parallel time omp for: 0.0843803
+Speedup omp for: 4.11853
+Elapsed time: 
+Serial time: 0.347043
+Parallel time row-wise: 0.0858847
+Speedup row wise: 4.0408
+Parallel time col-wise: 0.0587756
+Speedup col wise: 5.90454
+Parallel time 2drow-wise: 0.0812173
+Speedup 2drow-wise: 4.27302
+Parallel time 2dcol-wise: 0.0843045
+Speedup 2dcol-wise: 4.11654
+Parallel time omp for: 0.0920455
+Speedup omp for: 3.77034
+Elapsed time: 
+Serial time: 0.347885
+Parallel time row-wise: 0.0762002
+Speedup row wise: 4.56541
+Parallel time col-wise: 0.0625914
+Speedup col wise: 5.55804
+Parallel time 2drow-wise: 0.0946394
+Speedup 2drow-wise: 3.6759
+Parallel time 2dcol-wise: 0.0877524
+Speedup 2dcol-wise: 3.9644
+Parallel time omp for: 0.082594
+Speedup omp for: 4.21199
+Elapsed time: 
+Serial time: 0.512048
+Parallel time row-wise: 0.0852761
+Speedup row wise: 6.00459
+Parallel time col-wise: 0.153954
+Speedup col wise: 3.32598
+Parallel time 2drow-wise: 0.0852297
+Speedup 2drow-wise: 6.00786
+Parallel time 2dcol-wise: 0.0962174
+Speedup 2dcol-wise: 5.32178
+Parallel time omp for: 0.0868823
+Speedup omp for: 5.89359
+Elapsed time: 
+Serial time: 0.349402
+Parallel time row-wise: 0.0763669
+Speedup row wise: 4.57531
+Parallel time col-wise: 0.0653527
+Speedup col wise: 5.3464
+Parallel time 2drow-wise: 0.0925852
+Speedup 2drow-wise: 3.77384
+Parallel time 2dcol-wise: 0.0897959
+Speedup 2dcol-wise: 3.89107
+Parallel time omp for: 0.0812598
+Speedup omp for: 4.29981
+Elapsed time: 
+Serial time: 0.35001
+Parallel time row-wise: 0.0754306
+Speedup row wise: 4.64017
+Parallel time col-wise: 0.0666931
+Speedup col wise: 5.24807
+Parallel time 2drow-wise: 0.0863603
+Speedup 2drow-wise: 4.05291
+Parallel time 2dcol-wise: 0.0900235
+Speedup 2dcol-wise: 3.88799
+Parallel time omp for: 0.0877226
+Speedup omp for: 3.98997
+Elapsed time: 
+Serial time: 0.347724
+Parallel time row-wise: 0.0767108
+Speedup row wise: 4.53292
+Parallel time col-wise: 0.0692235
+Speedup col wise: 5.02321
+Parallel time 2drow-wise: 0.0797451
+Speedup 2drow-wise: 4.36044
+Parallel time 2dcol-wise: 0.0825314
+Speedup 2dcol-wise: 4.21323
+Parallel time omp for: 0.0887715
+Speedup omp for: 3.91707
+Elapsed time: 
+Serial time: 0.35118
+Parallel time row-wise: 0.0763408
+Speedup row wise: 4.60016
+Parallel time col-wise: 0.0679836
+Speedup col wise: 5.16565
+Parallel time 2drow-wise: 0.0887402
+Speedup 2drow-wise: 3.95739
+Parallel time 2dcol-wise: 0.0823342
+Speedup 2dcol-wise: 4.26529
+Parallel time omp for: 0.0831697
+Speedup omp for: 4.22245
+Elapsed time: 
+Serial time: 0.369391
+Parallel time row-wise: 0.359639
+Speedup row wise: 1.02712
+Parallel time col-wise: 0.368938
+Speedup col wise: 1.00123
+Parallel time 2drow-wise: 0.375277
+Speedup 2drow-wise: 0.984316
+Parallel time 2dcol-wise: 0.352246
+Speedup 2dcol-wise: 1.04867
+Parallel time omp for: 0.358577
+Speedup omp for: 1.03016
+Elapsed time: 
+Serial time: 0.374883
+Parallel time row-wise: 0.18255
+Speedup row wise: 2.05359
+Parallel time col-wise: 0.195799
+Speedup col wise: 1.91463
+Parallel time 2drow-wise: 0.192861
+Speedup 2drow-wise: 1.9438
+Parallel time 2dcol-wise: 0.192072
+Speedup 2dcol-wise: 1.95178
+Parallel time omp for: 0.1894
+Speedup omp for: 1.97932
+Elapsed time: 
+Serial time: 0.355783
+Parallel time row-wise: 0.181514
+Speedup row wise: 1.96009
+Parallel time col-wise: 0.187797
+Speedup col wise: 1.8945
+Parallel time 2drow-wise: 0.194015
+Speedup 2drow-wise: 1.83379
+Parallel time 2dcol-wise: 0.199408
+Speedup 2dcol-wise: 1.7842
+Parallel time omp for: 0.183143
+Speedup omp for: 1.94265
+Elapsed time: 
+Serial time: 0.378556
+Parallel time row-wise: 0.107685
+Speedup row wise: 3.51539
+Parallel time col-wise: 0.108534
+Speedup col wise: 3.4879
+Parallel time 2drow-wise: 0.199366
+Speedup 2drow-wise: 1.8988
+Parallel time 2dcol-wise: 0.19355
+Speedup 2dcol-wise: 1.95586
+Parallel time omp for: 0.177179
+Speedup omp for: 2.13658
+Elapsed time: 
+Serial time: 0.392411
+Parallel time row-wise: 0.0963576
+Speedup row wise: 4.07245
+Parallel time col-wise: 0.0757252
+Speedup col wise: 5.18204
+Parallel time 2drow-wise: 0.170359
+Speedup 2drow-wise: 2.30343
+Parallel time 2dcol-wise: 0.175105
+Speedup 2dcol-wise: 2.241
+Parallel time omp for: 0.164313
+Speedup omp for: 2.38819
+Elapsed time: 
+Serial time: 0.368459
+Parallel time row-wise: 0.0943286
+Speedup row wise: 3.90612
+Parallel time col-wise: 0.0590052
+Speedup col wise: 6.24452
+Parallel time 2drow-wise: 0.137382
+Speedup 2drow-wise: 2.682
+Parallel time 2dcol-wise: 0.159115
+Speedup 2dcol-wise: 2.31567
+Parallel time omp for: 0.15368
+Speedup omp for: 2.39757
+Elapsed time: 
+Serial time: 0.347967
+Parallel time row-wise: 0.109965
+Speedup row wise: 3.16436
+Parallel time col-wise: 0.0588408
+Speedup col wise: 5.9137
+Parallel time 2drow-wise: 0.128858
+Speedup 2drow-wise: 2.70038
+Parallel time 2dcol-wise: 0.136451
+Speedup 2dcol-wise: 2.55012
+Parallel time omp for: 0.158692
+Speedup omp for: 2.19272
+Elapsed time: 
+Serial time: 0.348201
+Parallel time row-wise: 0.111469
+Speedup row wise: 3.12375
+Parallel time col-wise: 0.0588728
+Speedup col wise: 5.91445
+Parallel time 2drow-wise: 0.128587
+Speedup 2drow-wise: 2.70789
+Parallel time 2dcol-wise: 0.151031
+Speedup 2dcol-wise: 2.30549
+Parallel time omp for: 0.135984
+Speedup omp for: 2.56059
+Elapsed time: 
+Serial time: 0.361681
+Parallel time row-wise: 0.0808287
+Speedup row wise: 4.47466
+Parallel time col-wise: 0.0617369
+Speedup col wise: 5.85843
+Parallel time 2drow-wise: 0.145769
+Speedup 2drow-wise: 2.4812
+Parallel time 2dcol-wise: 0.133307
+Speedup 2dcol-wise: 2.71315
+Parallel time omp for: 0.141876
+Speedup omp for: 2.54927
+Elapsed time: 
+Serial time: 0.399164
+Parallel time row-wise: 0.0762582
+Speedup row wise: 5.23437
+Parallel time col-wise: 0.0723996
+Speedup col wise: 5.51335
+Parallel time 2drow-wise: 0.126286
+Speedup 2drow-wise: 3.1608
+Parallel time 2dcol-wise: 0.136939
+Speedup 2dcol-wise: 2.91491
+Parallel time omp for: 0.139514
+Speedup omp for: 2.86111
+Elapsed time: 
+Serial time: 0.397619
+Parallel time row-wise: 0.0751457
+Speedup row wise: 5.29131
+Parallel time col-wise: 0.063093
+Speedup col wise: 6.30212
+Parallel time 2drow-wise: 0.111034
+Speedup 2drow-wise: 3.58107
+Parallel time 2dcol-wise: 0.113816
+Speedup 2dcol-wise: 3.49353
+Parallel time omp for: 0.137646
+Speedup omp for: 2.88871
+Elapsed time: 
+Serial time: 0.353907
+Parallel time row-wise: 0.0763451
+Speedup row wise: 4.63562
+Parallel time col-wise: 0.0654685
+Speedup col wise: 5.40575
+Parallel time 2drow-wise: 0.105592
+Speedup 2drow-wise: 3.35165
+Parallel time 2dcol-wise: 0.10737
+Speedup 2dcol-wise: 3.29615
+Parallel time omp for: 0.110289
+Speedup omp for: 3.20889
+Elapsed time: 
+Serial time: 0.400881
+Parallel time row-wise: 0.0742109
+Speedup row wise: 5.40191
+Parallel time col-wise: 0.101071
+Speedup col wise: 3.96633
+Parallel time 2drow-wise: 0.0941923
+Speedup 2drow-wise: 4.25598
+Parallel time 2dcol-wise: 0.100547
+Speedup 2dcol-wise: 3.987
+Parallel time omp for: 0.0982115
+Speedup omp for: 4.08181
+Elapsed time: 
+Serial time: 0.398602
+Parallel time row-wise: 0.0700904
+Speedup row wise: 5.68696
+Parallel time col-wise: 0.0745667
+Speedup col wise: 5.34557
+Parallel time 2drow-wise: 0.0820457
+Speedup 2drow-wise: 4.85828
+Parallel time 2dcol-wise: 0.0938401
+Speedup 2dcol-wise: 4.24767
+Parallel time omp for: 0.0911602
+Speedup omp for: 4.37254
+Elapsed time: 
+Serial time: 0.408505
+Parallel time row-wise: 0.403012
+Speedup row wise: 1.01363
+Parallel time col-wise: 0.35491
+Speedup col wise: 1.15101
+Parallel time 2drow-wise: 0.3556
+Speedup 2drow-wise: 1.14878
+Parallel time 2dcol-wise: 0.362435
+Speedup 2dcol-wise: 1.12711
+Parallel time omp for: 0.365274
+Speedup omp for: 1.11835
+Elapsed time: 
+Serial time: 0.398635
+Parallel time row-wise: 0.224135
+Speedup row wise: 1.77855
+Parallel time col-wise: 0.236159
+Speedup col wise: 1.688
+Parallel time 2drow-wise: 0.215705
+Speedup 2drow-wise: 1.84806
+Parallel time 2dcol-wise: 0.207711
+Speedup 2dcol-wise: 1.91918
+Parallel time omp for: 0.203685
+Speedup omp for: 1.95712
+Elapsed time: 
+Serial time: 0.371251
+Parallel time row-wise: 0.108827
+Speedup row wise: 3.4114
+Parallel time col-wise: 0.110957
+Speedup col wise: 3.3459
+Parallel time 2drow-wise: 0.192932
+Speedup 2drow-wise: 1.92425
+Parallel time 2dcol-wise: 0.186712
+Speedup 2dcol-wise: 1.98836
+Parallel time omp for: 0.180481
+Speedup omp for: 2.05701
+Elapsed time: 
+Serial time: 0.391961
+Parallel time row-wise: 0.0779977
+Speedup row wise: 5.02529
+Parallel time col-wise: 0.0774405
+Speedup col wise: 5.06145
+Parallel time 2drow-wise: 0.168351
+Speedup 2drow-wise: 2.32824
+Parallel time 2dcol-wise: 0.173804
+Speedup 2dcol-wise: 2.25519
+Parallel time omp for: 0.1638
+Speedup omp for: 2.39292
+Elapsed time: 
+Serial time: 0.353232
+Parallel time row-wise: 0.142946
+Speedup row wise: 2.47109
+Parallel time col-wise: 0.0817571
+Speedup col wise: 4.32051
+Parallel time 2drow-wise: 0.164229
+Speedup 2drow-wise: 2.15085
+Parallel time 2dcol-wise: 0.160226
+Speedup 2dcol-wise: 2.20459
+Parallel time omp for: 0.16851
+Speedup omp for: 2.09621
+Elapsed time: 
+Serial time: 0.340946
+Parallel time row-wise: 0.0785623
+Speedup row wise: 4.33982
+Parallel time col-wise: 0.0768
+Speedup col wise: 4.4394
+Parallel time 2drow-wise: 0.158351
+Speedup 2drow-wise: 2.15311
+Parallel time 2dcol-wise: 0.151068
+Speedup 2dcol-wise: 2.25691
+Parallel time omp for: 0.169758
+Speedup omp for: 2.00842
+Elapsed time: 
+Serial time: 0.368798
+Parallel time row-wise: 0.0756474
+Speedup row wise: 4.87522
+Parallel time col-wise: 0.0740546
+Speedup col wise: 4.98007
+Parallel time 2drow-wise: 0.14942
+Speedup 2drow-wise: 2.4682
+Parallel time 2dcol-wise: 0.173115
+Speedup 2dcol-wise: 2.13036
+Parallel time omp for: 0.173894
+Speedup omp for: 2.12082
+Elapsed time: 
+Serial time: 0.357815
+Parallel time row-wise: 0.110795
+Speedup row wise: 3.22953
+Parallel time col-wise: 0.0811265
+Speedup col wise: 4.41058
+Parallel time 2drow-wise: 0.147884
+Speedup 2drow-wise: 2.41957
+Parallel time 2dcol-wise: 0.177345
+Speedup 2dcol-wise: 2.01762
+Parallel time omp for: 0.183415
+Speedup omp for: 1.95084
+Elapsed time: 
+Serial time: 0.397631
+Parallel time row-wise: 0.0768124
+Speedup row wise: 5.17665
+Parallel time col-wise: 0.0764193
+Speedup col wise: 5.20328
+Parallel time 2drow-wise: 0.123181
+Speedup 2drow-wise: 3.22803
+Parallel time 2dcol-wise: 0.132983
+Speedup 2dcol-wise: 2.9901
+Parallel time omp for: 0.132244
+Speedup omp for: 3.00679
+Elapsed time: 
+Serial time: 0.348985
+Parallel time row-wise: 0.0802456
+Speedup row wise: 4.34897
+Parallel time col-wise: 0.070648
+Speedup col wise: 4.93978
+Parallel time 2drow-wise: 0.11984
+Speedup 2drow-wise: 2.91209
+Parallel time 2dcol-wise: 0.13601
+Speedup 2dcol-wise: 2.56588
+Parallel time omp for: 0.132207
+Speedup omp for: 2.63968
+Elapsed time: 
+Serial time: 0.393862
+Parallel time row-wise: 0.0754193
+Speedup row wise: 5.2223
+Parallel time col-wise: 0.064485
+Speedup col wise: 6.10781
+Parallel time 2drow-wise: 0.100883
+Speedup 2drow-wise: 3.90415
+Parallel time 2dcol-wise: 0.108881
+Speedup 2dcol-wise: 3.61735
+Parallel time omp for: 0.116237
+Speedup omp for: 3.38843
+Elapsed time: 
+Serial time: 0.347255
+Parallel time row-wise: 0.0690258
+Speedup row wise: 5.03081
+Parallel time col-wise: 0.0664958
+Speedup col wise: 5.22222
+Parallel time 2drow-wise: 0.111442
+Speedup 2drow-wise: 3.11603
+Parallel time 2dcol-wise: 0.110267
+Speedup 2dcol-wise: 3.14924
+Parallel time omp for: 0.107184
+Speedup omp for: 3.2398
+Elapsed time: 
+Serial time: 0.352933
+Parallel time row-wise: 0.0741674
+Speedup row wise: 4.75859
+Parallel time col-wise: 0.0694468
+Speedup col wise: 5.08205
+Parallel time 2drow-wise: 0.110856
+Speedup 2drow-wise: 3.18371
+Parallel time 2dcol-wise: 0.106088
+Speedup 2dcol-wise: 3.32678
+Parallel time omp for: 0.115202
+Speedup omp for: 3.06359
+Elapsed time: 
+Serial time: 0.412063
+Parallel time row-wise: 0.0806222
+Speedup row wise: 5.11104
+Parallel time col-wise: 0.070477
+Speedup col wise: 5.84678
+Parallel time 2drow-wise: 0.0865963
+Speedup 2drow-wise: 4.75844
+Parallel time 2dcol-wise: 0.0996913
+Speedup 2dcol-wise: 4.13339
+Parallel time omp for: 0.102423
+Speedup omp for: 4.02314
+Elapsed time: 
+Serial time: 0.382166
+Parallel time row-wise: 0.0854345
+Speedup row wise: 4.47321
+Parallel time col-wise: 0.0737251
+Speedup col wise: 5.18366
+Parallel time 2drow-wise: 0.0966056
+Speedup 2drow-wise: 3.95594
+Parallel time 2dcol-wise: 0.115595
+Speedup 2dcol-wise: 3.30607
+Parallel time omp for: 0.0918912
+Speedup omp for: 4.1589
+Elapsed time: 
+Serial time: 0.402486
+Parallel time row-wise: 0.0808215
+Speedup row wise: 4.97994
+Parallel time col-wise: 0.0711402
+Speedup col wise: 5.65764
+Parallel time 2drow-wise: 0.0956442
+Speedup 2drow-wise: 4.20816
+Parallel time 2dcol-wise: 0.0972036
+Speedup 2dcol-wise: 4.14065
+Parallel time omp for: 0.107568
+Speedup omp for: 3.7417
+Elapsed time: 
+Serial time: 0.345591
+Parallel time row-wise: 0.0830595
+Speedup row wise: 4.16077
+Parallel time col-wise: 0.0648637
+Speedup col wise: 5.32796
+Parallel time 2drow-wise: 0.0897064
+Speedup 2drow-wise: 3.85247
+Parallel time 2dcol-wise: 0.0967434
+Speedup 2dcol-wise: 3.57225
+Parallel time omp for: 0.0964164
+Speedup omp for: 3.58436
+Elapsed time: 
+Serial time: 0.3548
+Parallel time row-wise: 0.0823012
+Speedup row wise: 4.311
+Parallel time col-wise: 0.0662357
+Speedup col wise: 5.35664
+Parallel time 2drow-wise: 0.0962168
+Speedup 2drow-wise: 3.68751
+Parallel time 2dcol-wise: 0.1044
+Speedup 2dcol-wise: 3.39847
+Parallel time omp for: 0.0981887
+Speedup omp for: 3.61345
+Elapsed time: 
+Serial time: 0.347475
+Parallel time row-wise: 0.127492
+Speedup row wise: 2.72546
+Parallel time col-wise: 0.0654975
+Speedup col wise: 5.30517
+Parallel time 2drow-wise: 0.0873408
+Speedup 2drow-wise: 3.97838
+Parallel time 2dcol-wise: 0.0898283
+Speedup 2dcol-wise: 3.86821
+Parallel time omp for: 0.100088
+Speedup omp for: 3.47171
+Elapsed time: 
+Serial time: 0.370525
+Parallel time row-wise: 0.079376
+Speedup row wise: 4.66797
+Parallel time col-wise: 0.0700766
+Speedup col wise: 5.28742
+Parallel time 2drow-wise: 0.0710407
+Speedup 2drow-wise: 5.21567
+Parallel time 2dcol-wise: 0.0717741
+Speedup 2dcol-wise: 5.16237
+Parallel time omp for: 0.0732082
+Speedup omp for: 5.06124
+Elapsed time: 
+Serial time: 0.375929
+Parallel time row-wise: 0.35301
+Speedup row wise: 1.06493
+Parallel time col-wise: 0.358185
+Speedup col wise: 1.04954
+Parallel time 2drow-wise: 0.35345
+Speedup 2drow-wise: 1.0636
+Parallel time 2dcol-wise: 0.348638
+Speedup 2dcol-wise: 1.07828
+Parallel time omp for: 0.385459
+Speedup omp for: 0.975278
+Elapsed time: 
+Serial time: 0.371709
+Parallel time row-wise: 0.190126
+Speedup row wise: 1.95507
+Parallel time col-wise: 0.205359
+Speedup col wise: 1.81004
+Parallel time 2drow-wise: 0.208631
+Speedup 2drow-wise: 1.78166
+Parallel time 2dcol-wise: 0.187589
+Speedup 2dcol-wise: 1.98151
+Parallel time omp for: 0.18639
+Speedup omp for: 1.99425
+Elapsed time: 
+Serial time: 0.41997
+Parallel time row-wise: 0.114779
+Speedup row wise: 3.65895
+Parallel time col-wise: 0.111204
+Speedup col wise: 3.77657
+Parallel time 2drow-wise: 0.192459
+Speedup 2drow-wise: 2.18213
+Parallel time 2dcol-wise: 0.194337
+Speedup 2dcol-wise: 2.16104
+Parallel time omp for: 0.199904
+Speedup omp for: 2.10086
+Elapsed time: 
+Serial time: 0.386973
+Parallel time row-wise: 0.0753185
+Speedup row wise: 5.13782
+Parallel time col-wise: 0.0763672
+Speedup col wise: 5.06727
+Parallel time 2drow-wise: 0.173628
+Speedup 2drow-wise: 2.22875
+Parallel time 2dcol-wise: 0.169165
+Speedup 2dcol-wise: 2.28756
+Parallel time omp for: 0.161935
+Speedup omp for: 2.38968
+Elapsed time: 
+Serial time: 0.371615
+Parallel time row-wise: 0.0709839
+Speedup row wise: 5.23521
+Parallel time col-wise: 0.0637491
+Speedup col wise: 5.82934
+Parallel time 2drow-wise: 0.1386
+Speedup 2drow-wise: 2.68121
+Parallel time 2dcol-wise: 0.15513
+Speedup 2dcol-wise: 2.39551
+Parallel time omp for: 0.153634
+Speedup omp for: 2.41884
+Elapsed time: 
+Serial time: 0.373734
+Parallel time row-wise: 0.0703643
+Speedup row wise: 5.31141
+Parallel time col-wise: 0.0728127
+Speedup col wise: 5.13281
+Parallel time 2drow-wise: 0.120314
+Speedup 2drow-wise: 3.10631
+Parallel time 2dcol-wise: 0.133961
+Speedup 2dcol-wise: 2.78987
+Parallel time omp for: 0.132312
+Speedup omp for: 2.82463
+Elapsed time: 
+Serial time: 0.375945
+Parallel time row-wise: 0.07238
+Speedup row wise: 5.19404
+Parallel time col-wise: 0.0683895
+Speedup col wise: 5.49712
+Parallel time 2drow-wise: 0.109235
+Speedup 2drow-wise: 3.44162
+Parallel time 2dcol-wise: 0.111979
+Speedup 2dcol-wise: 3.35728
+Parallel time omp for: 0.11545
+Speedup omp for: 3.25634
+Elapsed time: 
+Serial time: 0.385811
+Parallel time row-wise: 0.0711876
+Speedup row wise: 5.41964
+Parallel time col-wise: 0.0681148
+Speedup col wise: 5.66413
+Parallel time 2drow-wise: 0.0928304
+Speedup 2drow-wise: 4.15609
+Parallel time 2dcol-wise: 0.0959803
+Speedup 2dcol-wise: 4.01969
+Parallel time omp for: 0.0986753
+Speedup omp for: 3.90991
+Elapsed time: 
+Serial time: 0.376921
+Parallel time row-wise: 0.0786386
+Speedup row wise: 4.79308
+Parallel time col-wise: 0.0671912
+Speedup col wise: 5.60968
+Parallel time 2drow-wise: 0.0842178
+Speedup 2drow-wise: 4.47555
+Parallel time 2dcol-wise: 0.0870125
+Speedup 2dcol-wise: 4.3318
+Parallel time omp for: 0.101393
+Speedup omp for: 3.71744
+Elapsed time: 
+Serial time: 0.459562
+Parallel time row-wise: 0.365996
+Speedup row wise: 1.25565
+Parallel time col-wise: 0.359376
+Speedup col wise: 1.27878
+Parallel time 2drow-wise: 0.375777
+Speedup 2drow-wise: 1.22296
+Parallel time 2dcol-wise: 0.360946
+Speedup 2dcol-wise: 1.27322
+Parallel time omp for: 0.351971
+Speedup omp for: 1.30568
+Elapsed time: 
+Serial time: 0.37467
+Parallel time row-wise: 0.185528
+Speedup row wise: 2.01949
+Parallel time col-wise: 0.194717
+Speedup col wise: 1.92418
+Parallel time 2drow-wise: 0.211672
+Speedup 2drow-wise: 1.77005
+Parallel time 2dcol-wise: 0.195631
+Speedup 2dcol-wise: 1.91519
+Parallel time omp for: 0.185943
+Speedup omp for: 2.01497
+Elapsed time: 
+Serial time: 0.387274
+Parallel time row-wise: 0.184113
+Speedup row wise: 2.10346
+Parallel time col-wise: 0.203687
+Speedup col wise: 1.90132
+Parallel time 2drow-wise: 0.206879
+Speedup 2drow-wise: 1.87198
+Parallel time 2dcol-wise: 0.190251
+Speedup 2dcol-wise: 2.03559
+Parallel time omp for: 0.197683
+Speedup omp for: 1.95906
+Elapsed time: 
+Serial time: 0.388065
+Parallel time row-wise: 0.185149
+Speedup row wise: 2.09596
+Parallel time col-wise: 0.197064
+Speedup col wise: 1.96923
+Parallel time 2drow-wise: 0.21095
+Speedup 2drow-wise: 1.8396
+Parallel time 2dcol-wise: 0.21107
+Speedup 2dcol-wise: 1.83856
+Parallel time omp for: 0.176157
+Speedup omp for: 2.20294
+Elapsed time: 
+Serial time: 0.360032
+Parallel time row-wise: 0.197299
+Speedup row wise: 1.82481
+Parallel time col-wise: 0.174047
+Speedup col wise: 2.0686
+Parallel time 2drow-wise: 0.186814
+Speedup 2drow-wise: 1.92723
+Parallel time 2dcol-wise: 0.178137
+Speedup 2dcol-wise: 2.0211
+Parallel time omp for: 0.176433
+Speedup omp for: 2.04062
+Elapsed time: 
+Serial time: 0.345692
+Parallel time row-wise: 0.199761
+Speedup row wise: 1.73053
+Parallel time col-wise: 0.190287
+Speedup col wise: 1.81669
+Parallel time 2drow-wise: 0.176067
+Speedup 2drow-wise: 1.96341
+Parallel time 2dcol-wise: 0.184982
+Speedup 2dcol-wise: 1.86879
+Parallel time omp for: 0.177363
+Speedup omp for: 1.94907
+Elapsed time: 
+Serial time: 0.424567
+Parallel time row-wise: 0.113623
+Speedup row wise: 3.73664
+Parallel time col-wise: 0.109591
+Speedup col wise: 3.87412
+Parallel time 2drow-wise: 0.199789
+Speedup 2drow-wise: 2.12508
+Parallel time 2dcol-wise: 0.19369
+Speedup 2dcol-wise: 2.19199
+Parallel time omp for: 0.197593
+Speedup omp for: 2.14869
+Elapsed time: 
+Serial time: 0.379532
+Parallel time row-wise: 0.0778042
+Speedup row wise: 4.87805
+Parallel time col-wise: 0.0750384
+Speedup col wise: 5.05784
+Parallel time 2drow-wise: 0.174067
+Speedup 2drow-wise: 2.18038
+Parallel time 2dcol-wise: 0.170727
+Speedup 2dcol-wise: 2.22304
+Parallel time omp for: 0.1673
+Speedup omp for: 2.26857
+Elapsed time: 
+Serial time: 0.377277
+Parallel time row-wise: 0.0787114
+Speedup row wise: 4.79317
+Parallel time col-wise: 0.0683421
+Speedup col wise: 5.52041
+Parallel time 2drow-wise: 0.144685
+Speedup 2drow-wise: 2.60757
+Parallel time 2dcol-wise: 0.154527
+Speedup 2dcol-wise: 2.44149
+Parallel time omp for: 0.162213
+Speedup omp for: 2.32582
+Elapsed time: 
+Serial time: 0.383113
+Parallel time row-wise: 0.071009
+Speedup row wise: 5.39526
+Parallel time col-wise: 0.0741813
+Speedup col wise: 5.16454
+Parallel time 2drow-wise: 0.129859
+Speedup 2drow-wise: 2.95021
+Parallel time 2dcol-wise: 0.124731
+Speedup 2dcol-wise: 3.07151
+Parallel time omp for: 0.13112
+Speedup omp for: 2.92184
+Elapsed time: 
+Serial time: 0.374389
+Parallel time row-wise: 0.0780586
+Speedup row wise: 4.79625
+Parallel time col-wise: 0.0676118
+Speedup col wise: 5.53733
+Parallel time 2drow-wise: 0.103048
+Speedup 2drow-wise: 3.63314
+Parallel time 2dcol-wise: 0.114248
+Speedup 2dcol-wise: 3.27699
+Parallel time omp for: 0.112579
+Speedup omp for: 3.32557
+Elapsed time: 
+Serial time: 0.39698
+Parallel time row-wise: 0.0770171
+Speedup row wise: 5.15444
+Parallel time col-wise: 0.0643757
+Speedup col wise: 6.16662
+Parallel time 2drow-wise: 0.0944151
+Speedup 2drow-wise: 4.20463
+Parallel time 2dcol-wise: 0.0962289
+Speedup 2dcol-wise: 4.12538
+Parallel time omp for: 0.0994166
+Speedup omp for: 3.9931
+Elapsed time: 
+Serial time: 0.345941
+Parallel time row-wise: 0.0794581
+Speedup row wise: 4.35376
+Parallel time col-wise: 0.0691261
+Speedup col wise: 5.00449
+Parallel time 2drow-wise: 0.0908787
+Speedup 2drow-wise: 3.80663
+Parallel time 2dcol-wise: 0.0945987
+Speedup 2dcol-wise: 3.65694
+Parallel time omp for: 0.100807
+Speedup omp for: 3.43172
+Elapsed time: 
+Serial time: 0.408571
+Parallel time row-wise: 0.076311
+Speedup row wise: 5.35402
+Parallel time col-wise: 0.0634114
+Speedup col wise: 6.44318
+Parallel time 2drow-wise: 0.0940589
+Speedup 2drow-wise: 4.34377
+Parallel time 2dcol-wise: 0.0856148
+Speedup 2dcol-wise: 4.7722
+Parallel time omp for: 0.097624
+Speedup omp for: 4.18514
+Elapsed time: 
+Serial time: 0.37998
+Parallel time row-wise: 0.361174
+Speedup row wise: 1.05207
+Parallel time col-wise: 0.365656
+Speedup col wise: 1.03918
+Parallel time 2drow-wise: 0.363758
+Speedup 2drow-wise: 1.0446
+Parallel time 2dcol-wise: 0.363708
+Speedup 2dcol-wise: 1.04474
+Parallel time omp for: 0.351613
+Speedup omp for: 1.08068
+Elapsed time: 
+Serial time: 0.38699
+Parallel time row-wise: 0.182555
+Speedup row wise: 2.11985
+Parallel time col-wise: 0.204816
+Speedup col wise: 1.88946
+Parallel time 2drow-wise: 0.204872
+Speedup 2drow-wise: 1.88893
+Parallel time 2dcol-wise: 0.188421
+Speedup 2dcol-wise: 2.05386
+Parallel time omp for: 0.185846
+Speedup omp for: 2.08231
+Elapsed time: 
+Serial time: 0.380655
+Parallel time row-wise: 0.105919
+Speedup row wise: 3.59382
+Parallel time col-wise: 0.106069
+Speedup col wise: 3.58876
+Parallel time 2drow-wise: 0.184218
+Speedup 2drow-wise: 2.06633
+Parallel time 2dcol-wise: 0.187891
+Speedup 2dcol-wise: 2.02594
+Parallel time omp for: 0.188702
+Speedup omp for: 2.01723
+Elapsed time: 
+Serial time: 0.345544
+Parallel time row-wise: 0.148256
+Speedup row wise: 2.33072
+Parallel time col-wise: 0.111183
+Speedup col wise: 3.10789
+Parallel time 2drow-wise: 0.175363
+Speedup 2drow-wise: 1.97045
+Parallel time 2dcol-wise: 0.186504
+Speedup 2dcol-wise: 1.85274
+Parallel time omp for: 0.178504
+Speedup omp for: 1.93578
+Elapsed time: 
+Serial time: 0.343681
+Parallel time row-wise: 0.104338
+Speedup row wise: 3.29394
+Parallel time col-wise: 0.108814
+Speedup col wise: 3.15844
+Parallel time 2drow-wise: 0.179863
+Speedup 2drow-wise: 1.9108
+Parallel time 2dcol-wise: 0.169176
+Speedup 2dcol-wise: 2.0315
+Parallel time omp for: 0.171082
+Speedup omp for: 2.00887
+Elapsed time: 
+Serial time: 0.381145
+Parallel time row-wise: 0.185571
+Speedup row wise: 2.0539
+Parallel time col-wise: 0.201933
+Speedup col wise: 1.88748
+Parallel time 2drow-wise: 0.189561
+Speedup 2drow-wise: 2.01067
+Parallel time 2dcol-wise: 0.194683
+Speedup 2dcol-wise: 1.95777
+Parallel time omp for: 0.182591
+Speedup omp for: 2.08742
+Elapsed time: 
+Serial time: 0.392961
+Parallel time row-wise: 0.111798
+Speedup row wise: 3.51491
+Parallel time col-wise: 0.106893
+Speedup col wise: 3.67621
+Parallel time 2drow-wise: 0.185719
+Speedup 2drow-wise: 2.11589
+Parallel time 2dcol-wise: 0.192585
+Speedup 2dcol-wise: 2.04046
+Parallel time omp for: 0.178957
+Speedup omp for: 2.19584
+Elapsed time: 
+Serial time: 0.378533
+Parallel time row-wise: 0.0774662
+Speedup row wise: 4.88642
+Parallel time col-wise: 0.0767982
+Speedup col wise: 4.92892
+Parallel time 2drow-wise: 0.167474
+Speedup 2drow-wise: 2.26025
+Parallel time 2dcol-wise: 0.174344
+Speedup 2dcol-wise: 2.17119
+Parallel time omp for: 0.166962
+Speedup omp for: 2.26718
+Elapsed time: 
+Serial time: 0.411417
+Parallel time row-wise: 0.0828972
+Speedup row wise: 4.96299
+Parallel time col-wise: 0.0668116
+Speedup col wise: 6.15787
+Parallel time 2drow-wise: 0.138035
+Speedup 2drow-wise: 2.98053
+Parallel time 2dcol-wise: 0.15895
+Speedup 2dcol-wise: 2.58835
+Parallel time omp for: 0.147049
+Speedup omp for: 2.79783
+Elapsed time: 
+Serial time: 0.381789
+Parallel time row-wise: 0.0746454
+Speedup row wise: 5.11471
+Parallel time col-wise: 0.072381
+Speedup col wise: 5.27472
+Parallel time 2drow-wise: 0.123967
+Speedup 2drow-wise: 3.07976
+Parallel time 2dcol-wise: 0.137883
+Speedup 2dcol-wise: 2.76894
+Parallel time omp for: 0.135005
+Speedup omp for: 2.82797
+Elapsed time: 
+Serial time: 0.385202
+Parallel time row-wise: 0.0883435
+Speedup row wise: 4.36028
+Parallel time col-wise: 0.0840906
+Speedup col wise: 4.5808
+Parallel time 2drow-wise: 0.105349
+Speedup 2drow-wise: 3.65644
+Parallel time 2dcol-wise: 0.113774
+Speedup 2dcol-wise: 3.38569
+Parallel time omp for: 0.115002
+Speedup omp for: 3.34951
+Elapsed time: 
+Serial time: 0.383122
+Parallel time row-wise: 0.0665528
+Speedup row wise: 5.75666
+Parallel time col-wise: 0.0687304
+Speedup col wise: 5.57427
+Parallel time 2drow-wise: 0.0932702
+Speedup 2drow-wise: 4.10766
+Parallel time 2dcol-wise: 0.0991047
+Speedup 2dcol-wise: 3.86583
+Parallel time omp for: 0.106694
+Speedup omp for: 3.59085
+Elapsed time: 
+Serial time: 0.378862
+Parallel time row-wise: 0.0672925
+Speedup row wise: 5.63008
+Parallel time col-wise: 0.068091
+Speedup col wise: 5.56406
+Parallel time 2drow-wise: 0.0835668
+Speedup 2drow-wise: 4.53365
+Parallel time 2dcol-wise: 0.0879883
+Speedup 2dcol-wise: 4.30582
+Parallel time omp for: 0.0907477
+Speedup omp for: 4.1749

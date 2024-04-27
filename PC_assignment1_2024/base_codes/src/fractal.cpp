@@ -14,10 +14,11 @@
 using namespace std;
 
 #define DIM 768 //defines the image dimensions width and height
-/*Uncomment the following line for visualization of the bitmap*/
+/*Uncomment the follow
+ing line for visualization of the bitmap*/
 #define NUM_THREADS 16
 
-#define DISPLAY 1
+// #define DISPLAY 1
 
 
 //struct used in the julia function to represent complex numbers on the complex plane
@@ -203,7 +204,7 @@ void kernal_omp_colwise ( unsigned char *ptr ){
  }
   //responsible for calculating and assigning colors to pixels in the image
  void kernal_omp_for ( unsigned char *ptr ){ //send in a pointer to an array of unsigned chars -> prolly reps image data in memory RGB?
-    #pragma omp parallel for collapse(2)//collapse the two loops into one
+    #pragma omp parallel for collapse(2) schedule(static)//collapse the two loops into one
     for (int y=0; y<DIM; y++) { //iterate over the rows of the image
         for (int x=0; x<DIM; x++) { //iterate over the columns of the image
             int offset = x + y * DIM; //used to locate memory location of the pixel in the image data array pointed to by ptr
