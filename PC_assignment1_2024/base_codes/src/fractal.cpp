@@ -18,7 +18,7 @@ using namespace std;
 ing line for visualization of the bitmap*/
 #define NUM_THREADS 16
 
-// #define DISPLAY 1
+#define DISPLAY 1
 
 
 //struct used in the julia function to represent complex numbers on the complex plane
